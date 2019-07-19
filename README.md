@@ -1,6 +1,6 @@
 # MX5-Arduino-Speed
 
-##Target Hardware
+## Target Hardware
 
 Arduino ATMega328p
 
@@ -10,7 +10,7 @@ Arduino ATMega328p
 
 5v Speed sensor (#DSSA from www.carbuildersolutions.com)
 
-##Pinout
+## Pinout
 
 OLED_MOSI   9
 
@@ -26,7 +26,7 @@ Beeper 2 (and to GND)
 
 Speed sesor 4 (and 5v, GND)
 
-##Configuration commands (via USB Serial 115200)
+## Configuration commands (via USB Serial 115200)
 
 ODO - Press return and then enter new odometer reading
 
@@ -36,7 +36,7 @@ CAL - Enter calibration mode (see below)
 
 RUN - Exit calibration mode
 
-##Calibration mode
+## Calibration mode
 
 In calibration mode it starts counting pulses immediately. Calibration should be done over a measured half a mile. Press enter when starting the half mile, and again at the end. The number of pulses will be displayed on the screen. To write this to EEPROM and return to normal mode type 'RUN'. If the data is not suitable (missed marker etc) then just repeat the measurement.
 
