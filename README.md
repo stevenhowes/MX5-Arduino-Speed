@@ -2,7 +2,8 @@
 
 ## Target Hardware
 
-Arduino ATMega328p
+Arduino Nano ATMega328p
+Arduino Nano Every ATMega4809 (Register emulation not required)
 
 2.42 Inch SS1309 128x64 Monocrhome OLED
 

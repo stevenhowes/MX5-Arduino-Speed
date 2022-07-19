@@ -48,7 +48,7 @@ const unsigned char PROGMEM logo_bmp [] = {
 };
 
 
-Adafruit_SSD1306 display(OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
+Adafruit_SSD1306 display(128, 64, OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 
 // Boot graphics and screen refresh
 int prettylinecount = 64;
@@ -59,7 +59,7 @@ byte mode = 0; //(0 = bootlogo, 1 = running, 2 = calibrate)
 // Pulse counting / pin state
 unsigned long pulsecount = 0;
 byte lastspeedstate = 0;
-bytespeedstate = 0;
+byte speedstate = 0;
 
 // Odometer and current mile pulses
 unsigned long odometer = 0;
@@ -93,7 +93,7 @@ void setup()
   Serial.setTimeout(10);
   Serial.println();
   Serial.println();
-  Serial.println("---- stevehowes/MX5-Arduino-Speed ----");
+  Serial.println("---- stevenhowes/MX5-Arduino-Speed ----");
 
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  //Initialize with the I2C address 0x3C.
 
@@ -360,4 +360,3 @@ void runmode()
     lastspeedstate = speedstate;
   }
 }
-
